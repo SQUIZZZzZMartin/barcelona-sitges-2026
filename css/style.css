@@ -305,6 +305,27 @@ section.alt { background: var(--cream-dark); }
 
 .article p { color: var(--ink); }
 
+.article ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 0 1.1em 0;
+}
+
+.article ul li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.article ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
 .tip-box {
   background: var(--cream-dark);
   border-left: 4px solid var(--terracotta);
