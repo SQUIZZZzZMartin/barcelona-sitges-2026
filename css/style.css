@@ -441,6 +441,33 @@ footer.site-footer {
   border-bottom: none;
 }
 
+.map-toggle {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--cream-dark);
+  border-radius: 999px;
+  padding: 4px;
+  margin: 4px 0 24px;
+}
+
+.map-toggle-btn {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.map-toggle-btn.active {
+  background: var(--terracotta);
+  color: white;
+}
+
 .content-img {
   width: 100%;
   height: auto;
