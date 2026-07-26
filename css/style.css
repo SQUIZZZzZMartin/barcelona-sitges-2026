@@ -1,0 +1,383 @@
+:root {
+  --cream: #faf6ef;
+  --cream-dark: #f0e9db;
+  --ink: #2b2622;
+  --ink-soft: #5a5049;
+  --terracotta: #c9603c;
+  --terracotta-dark: #a84a2a;
+  --teal: #1f6f6b;
+  --gold: #e0a944;
+  --line: #e6ddc9;
+  --radius: 18px;
+  --shadow: 0 8px 30px rgba(43, 38, 34, 0.08);
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Georgia", "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 0.5em 0;
+}
+
+p { margin: 0 0 1.1em 0; }
+
+a { color: var(--terracotta-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header / Nav */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 246, 239, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand .dot { color: var(--terracotta); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav a {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+  color: var(--terracotta-dark);
+}
+
+/* Hero */
+
+.hero {
+  padding: 72px 0 56px;
+  text-align: center;
+}
+
+.hero .kicker {
+  font-family: "Avenir Next", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  max-width: 720px;
+  margin: 0 auto 18px;
+}
+
+.hero p.lead {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+/* Countdown */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 40px 0 8px;
+  flex-wrap: wrap;
+}
+
+.countdown .box {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 22px;
+  min-width: 84px;
+  text-align: center;
+}
+
+.countdown .box .num {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--terracotta-dark);
+}
+
+.countdown .box .label {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+/* Section */
+
+section { padding: 56px 0; }
+
+section.alt { background: var(--cream-dark); }
+
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.section-head .kicker {
+  font-family: "Avenir Next", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-head h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
+
+/* Cards grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(43, 38, 34, 0.12);
+}
+
+.card .emoji-badge {
+  font-size: 1.6rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.card p {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+  margin: 0;
+}
+
+.card a.card-link {
+  margin-top: auto;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+}
+
+/* Trip overview strip */
+
+.overview-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.overview-strip .item {
+  background: white;
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+
+.overview-strip .item .k {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.overview-strip .item .v {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.overview-strip .item .v-sub {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Content pages (article) */
+
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.article h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 0.3em; }
+.article h2 {
+  font-size: 1.5rem;
+  margin-top: 2em;
+  padding-top: 0.4em;
+  border-top: 1px solid var(--line);
+}
+.article h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0.6em; }
+
+.article p { color: var(--ink); }
+
+.tip-box {
+  background: var(--cream-dark);
+  border-left: 4px solid var(--terracotta);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 0.95rem;
+}
+
+.tip-box strong { color: var(--terracotta-dark); }
+
+/* Breadcrumb / back link */
+
+.back-link {
+  display: inline-block;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* Footer */
+
+footer.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 0;
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.82rem;
+}
+
+/* Mobile nav */
+
+@media (max-width: 760px) {
+  nav.main-nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    display: none;
+    flex-direction: column;
+    padding: 12px 24px 20px;
+  }
+  nav.main-nav.open { display: flex; }
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  nav.main-nav ul li {
+    border-bottom: 1px solid var(--line);
+  }
+  nav.main-nav ul li a {
+    display: block;
+    padding: 14px 4px;
+  }
+  .nav-toggle { display: block; }
+}
+
+/* Placeholder image blocks (until real photos are inserted) */
+
+.img-placeholder {
+  background: linear-gradient(135deg, var(--cream-dark), var(--line));
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 20px;
+  min-height: 180px;
+}
