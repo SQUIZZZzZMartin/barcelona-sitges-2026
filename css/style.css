@@ -372,6 +372,8 @@ footer.site-footer {
   background: linear-gradient(135deg, var(--cream-dark), var(--line));
   border-radius: var(--radius);
   display: flex;
+  flex-direction: column;
+  gap: 6px;
   align-items: center;
   justify-content: center;
   color: var(--ink-soft);
@@ -380,4 +382,19 @@ footer.site-footer {
   text-align: center;
   padding: 20px;
   min-height: 180px;
+}
+
+.img-placeholder small {
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+.content-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 24px 0;
+  object-fit: cover;
 }
