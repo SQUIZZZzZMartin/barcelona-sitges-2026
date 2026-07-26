@@ -1,7 +1,7 @@
 // Service Worker – Barcelona & Sitges 2026 Reiseführer
 // Einfache Cache-First-Strategie, damit der Guide auch ohne Internet (z.B. Metro, Flug) funktioniert.
 
-var CACHE_NAME = "bcn-sitges-2026-v2";
+var CACHE_NAME = "bcn-sitges-2026-v3";
 
 var CORE_ASSETS = [
   "./",

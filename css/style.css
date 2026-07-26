@@ -410,6 +410,37 @@ footer.site-footer {
   opacity: 0.75;
 }
 
+.article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.92rem;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.article table th,
+.article table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.article table th {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  background: var(--cream-dark);
+}
+
+.article table tr:last-child td {
+  border-bottom: none;
+}
+
 .content-img {
   width: 100%;
   height: auto;
