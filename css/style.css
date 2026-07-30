@@ -441,6 +441,48 @@ footer.site-footer {
   border-bottom: none;
 }
 
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+
+.schedule-item {
+  background: white;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+.schedule-item .time {
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 800;
+  color: var(--terracotta-dark);
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.ticket-badge {
+  display: inline-block;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: var(--teal);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.ticket-badge.open {
+  background: var(--gold);
+  color: var(--ink);
+}
+
 .map-toggle {
   display: inline-flex;
   gap: 4px;
